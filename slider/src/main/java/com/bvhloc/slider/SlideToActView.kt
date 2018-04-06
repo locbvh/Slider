@@ -30,6 +30,8 @@ import org.xmlpull.v1.XmlPullParser
 import org.xmlpull.v1.XmlPullParserException
 
 /**
+ * ver 0.2.0.2
+ *
  *  Class representing the custom view, SlideToActView.
  *
  *  SlideToActView is an elegant material designed slider, that enrich your app

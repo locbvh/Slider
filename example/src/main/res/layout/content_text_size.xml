@@ -12,26 +12,26 @@
         android:orientation="vertical">
 
         <!-- No Text -->
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             style="@style/SlideToActView.Example"
             app:text="" />
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             style="@style/SlideToActView.Example"
             app:text_size="12sp"
             app:text="TextSize 12sp" />
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             style="@style/SlideToActView.Example"
             app:text_size="14sp"
             app:text="TextSize 14sp" />
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             style="@style/SlideToActView.Example"
             app:text_size="16sp"
             app:text="TextSize 16sp" />
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             style="@style/SlideToActView.Example"
             app:text_size="18sp"
             app:text="TextSize 18sp" />

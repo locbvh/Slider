@@ -11,43 +11,43 @@
         android:clipToPadding="false"
         android:orientation="vertical">
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             android:id="@+id/slide_1"
             style="@style/SlideToActView.Example"
             app:area_margin="0dp"
             app:text="Area Margin 0dp" />
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             style="@style/SlideToActView.Example"
             app:area_margin="2dp"
             app:text="Area Margin 2dp" />
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             style="@style/SlideToActView.Example"
             app:area_margin="4dp"
             app:text="Area Margin 4dp" />
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             style="@style/SlideToActView.Example"
             app:area_margin="8dp"
             app:text="Area Margin 8dp" />
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             style="@style/SlideToActView.Example"
             app:area_margin="12dp"
             app:text="Area Margin 12dp" />
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             style="@style/SlideToActView.Example"
             app:area_margin="20dp"
             app:text="Area Margin 20dp" />
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             style="@style/SlideToActView.Example"
             app:area_margin="24dp"
             app:text="Area Margin 24dp" />
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             style="@style/SlideToActView.Example"
             app:area_margin="28dp"
             app:text="Area Margin 28dp" />

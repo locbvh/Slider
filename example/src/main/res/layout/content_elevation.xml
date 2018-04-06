@@ -11,42 +11,42 @@
         android:clipToPadding="false"
         android:orientation="vertical">
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             style="@style/SlideToActView.Example"
             android:elevation="0dp"
             app:text="Elevation 0dp" />
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             style="@style/SlideToActView.Example"
             android:elevation="2dp"
             app:text="Elevation 2dp" />
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             style="@style/SlideToActView.Example"
             android:elevation="4dp"
             app:text="Elevation 4dp" />
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             style="@style/SlideToActView.Example"
             android:elevation="8dp"
             app:text="Elevation 8dp" />
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             style="@style/SlideToActView.Example"
             android:elevation="12dp"
             app:text="Elevation 12dp" />
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             style="@style/SlideToActView.Example"
             android:elevation="20dp"
             app:text="Elevation 20dp" />
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             style="@style/SlideToActView.Example"
             android:elevation="24dp"
             app:text="Elevation 24dp" />
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             style="@style/SlideToActView.Example"
             android:elevation="28dp"
             app:text="Elevation 28dp" />

@@ -9,7 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.bvhloc.slider.SlideToActView;
+import com.bvhloc.slider.BvhSlider;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.reset) {
-            ((SlideToActView) findViewById(R.id.welcome_slider)).resetSlider();
+            ((BvhSlider) findViewById(R.id.welcome_slider)).resetSlider();
         }
         return super.onOptionsItemSelected(item);
     }

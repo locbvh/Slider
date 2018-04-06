@@ -30,16 +30,16 @@ import org.xmlpull.v1.XmlPullParser
 import org.xmlpull.v1.XmlPullParserException
 
 /**
- *  Class representing the custom view, SlideToActView.
+ *  Class representing the custom view, BvhSlider.
  *
- *  SlideToActView is an elegant material designed slider, that enrich your app
+ *  BvhSlider is an elegant material designed slider, that enrich your app
  *  with a "Slide-to-unlock" like widget.
  *
  *  @author cortinico
  */
-class SlideToActView(context: Context,
-    attrs: AttributeSet?,
-    defStyleAttr: Int) : View(context, attrs, defStyleAttr) {
+class BvhSlider(context: Context,
+                attrs: AttributeSet?,
+                defStyleAttr: Int) : View(context, attrs, defStyleAttr) {
 
     constructor(context: Context) : this(context, null, R.styleable.SlideToActViewTheme_slideToActViewStyle)
     constructor(context: Context, attrs: AttributeSet) : this(context, attrs, R.styleable.SlideToActViewTheme_slideToActViewStyle)
@@ -443,7 +443,7 @@ class SlideToActView(context: Context,
 
         animSet.addListener(object : Animator.AnimatorListener {
             override fun onAnimationStart(p0: Animator?) {
-                onSlideToActAnimationEventListener?.onSlideCompleteAnimationStarted(this@SlideToActView, mPositionPerc)
+                onSlideToActAnimationEventListener?.onSlideCompleteAnimationStarted(this@BvhSlider, mPositionPerc)
             }
 
             override fun onAnimationCancel(p0: Animator?) {
@@ -451,8 +451,8 @@ class SlideToActView(context: Context,
 
             override fun onAnimationEnd(p0: Animator?) {
                 mIsCompleted = true
-                onSlideToActAnimationEventListener?.onSlideCompleteAnimationEnded(this@SlideToActView)
-                onSlideCompleteListener?.onSlideComplete(this@SlideToActView)
+                onSlideToActAnimationEventListener?.onSlideCompleteAnimationEnded(this@BvhSlider)
+                onSlideCompleteListener?.onSlideComplete(this@BvhSlider)
             }
 
             override fun onAnimationRepeat(p0: Animator?) {
@@ -541,7 +541,7 @@ class SlideToActView(context: Context,
 
         animSet.addListener(object : Animator.AnimatorListener {
             override fun onAnimationStart(p0: Animator?) {
-                onSlideToActAnimationEventListener?.onSlideResetAnimationStarted(this@SlideToActView)
+                onSlideToActAnimationEventListener?.onSlideResetAnimationStarted(this@BvhSlider)
             }
 
             override fun onAnimationCancel(p0: Animator?) {
@@ -550,8 +550,8 @@ class SlideToActView(context: Context,
             override fun onAnimationEnd(p0: Animator?) {
                 isEnabled = true
                 stopTickAnimation()
-                onSlideToActAnimationEventListener?.onSlideResetAnimationEnded(this@SlideToActView)
-                onSlideResetListener?.onSlideReset(this@SlideToActView)
+                onSlideToActAnimationEventListener?.onSlideResetAnimationEnded(this@BvhSlider)
+                onSlideResetListener?.onSlideReset(this@BvhSlider)
             }
 
             override fun onAnimationRepeat(p0: Animator?) {
@@ -583,7 +583,7 @@ class SlideToActView(context: Context,
     }
 
     /**
-     * Event handler for the SlideToActView animation events.
+     * Event handler for the BvhSlider animation events.
      * This event handler can be used to react to animation events from the Slide,
      * the event will be fired whenever an animation start/end.
      */
@@ -593,34 +593,34 @@ class SlideToActView(context: Context,
          * Called when the slide complete animation start. You can perform actions during the complete
          * animations.
          *
-         * @param view The SlideToActView who created the event
+         * @param view The BvhSlider who created the event
          * @param threshold The mPosition (in percentage [0f,1f]) where the user has left the cursor
          */
-        fun onSlideCompleteAnimationStarted(view: SlideToActView, threshold: Float)
+        fun onSlideCompleteAnimationStarted(view: BvhSlider, threshold: Float)
 
         /**
          * Called when the slide complete animation finish. At this point the slider is stuck in the
          * center of the slider.
          *
-         * @param view The SlideToActView who created the event
+         * @param view The BvhSlider who created the event
          */
-        fun onSlideCompleteAnimationEnded(view: SlideToActView)
+        fun onSlideCompleteAnimationEnded(view: BvhSlider)
 
         /**
          * Called when the slide reset animation start. You can perform actions during the reset
          * animations.
          *
-         * @param view The SlideToActView who created the event
+         * @param view The BvhSlider who created the event
          */
-        fun onSlideResetAnimationStarted(view: SlideToActView)
+        fun onSlideResetAnimationStarted(view: BvhSlider)
 
         /**
          * Called when the slide reset animation finish. At this point the slider will be in the
          * ready on the left of the screen and user can interact with it.
          *
-         * @param view The SlideToActView who created the event
+         * @param view The BvhSlider who created the event
          */
-        fun onSlideResetAnimationEnded(view: SlideToActView)
+        fun onSlideResetAnimationEnded(view: BvhSlider)
     }
 
     /**
@@ -630,9 +630,9 @@ class SlideToActView(context: Context,
     interface OnSlideCompleteListener {
         /**
          * Called when user performed the slide
-         * @param view The SlideToActView who created the event
+         * @param view The BvhSlider who created the event
          */
-        fun onSlideComplete(view: SlideToActView)
+        fun onSlideComplete(view: BvhSlider)
     }
 
     /**
@@ -642,13 +642,13 @@ class SlideToActView(context: Context,
     interface OnSlideResetListener {
         /**
          * Called when slides is again available
-         * @param view The SlideToActView who created the event
+         * @param view The BvhSlider who created the event
          */
-        fun onSlideReset(view: SlideToActView)
+        fun onSlideReset(view: BvhSlider)
     }
 
     /**
-     * Outline provider for the SlideToActView.
+     * Outline provider for the BvhSlider.
      * This outline will suppress the shadow (till the moment when Android will support
      * updatable Outlines).
      */

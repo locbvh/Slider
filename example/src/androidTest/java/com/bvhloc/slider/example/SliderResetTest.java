@@ -7,7 +7,7 @@ import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.view.WindowManager;
 
-import com.bvhloc.slider.SlideToActView;
+import com.bvhloc.slider.BvhSlider;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -55,7 +55,7 @@ public class SliderResetTest {
     public void testSlideToActView_withSwipeRight_isCompleted() throws InterruptedException {
         onView(withId(R.id.slide_1)).perform(swipeRight());
         Thread.sleep(1500);
-        assertTrue(((SlideToActView) mActivityRule.getActivity().findViewById(R.id.slide_1)).isCompleted());
+        assertTrue(((BvhSlider) mActivityRule.getActivity().findViewById(R.id.slide_1)).isCompleted());
     }
 
     @Test
@@ -64,6 +64,6 @@ public class SliderResetTest {
         Thread.sleep(1200);
         onView(withId(R.id.reset)).perform(click());
         Thread.sleep(700);
-        assertFalse(((SlideToActView) mActivityRule.getActivity().findViewById(R.id.slide_1)).isCompleted());
+        assertFalse(((BvhSlider) mActivityRule.getActivity().findViewById(R.id.slide_1)).isCompleted());
     }
 }

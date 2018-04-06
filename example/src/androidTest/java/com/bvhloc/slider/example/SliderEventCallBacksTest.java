@@ -8,7 +8,7 @@ import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.view.WindowManager;
 
-import com.bvhloc.slider.SlideToActView;
+import com.bvhloc.slider.BvhSlider;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -54,9 +54,9 @@ public class SliderEventCallBacksTest {
     @Test
     public void testOnSlideCompleteListener() throws InterruptedException {
         final boolean[] flag = {false};
-        ((SlideToActView) mActivityRule.getActivity().findViewById(R.id.slide_1)).setOnSlideCompleteListener(new SlideToActView.OnSlideCompleteListener() {
+        ((BvhSlider) mActivityRule.getActivity().findViewById(R.id.slide_1)).setOnSlideCompleteListener(new BvhSlider.OnSlideCompleteListener() {
             @Override
-            public void onSlideComplete(@NonNull SlideToActView view) {
+            public void onSlideComplete(@NonNull BvhSlider view) {
                 flag[0] = true;
             }
         });
@@ -68,9 +68,9 @@ public class SliderEventCallBacksTest {
     @Test
     public void testOnSlideResetListener() throws InterruptedException {
         final boolean[] flag = {false};
-        ((SlideToActView) mActivityRule.getActivity().findViewById(R.id.slide_1)).setOnSlideResetListener(new SlideToActView.OnSlideResetListener() {
+        ((BvhSlider) mActivityRule.getActivity().findViewById(R.id.slide_1)).setOnSlideResetListener(new BvhSlider.OnSlideResetListener() {
             @Override
-            public void onSlideReset(@NonNull SlideToActView view) {
+            public void onSlideReset(@NonNull BvhSlider view) {
                 flag[0] = true;
             }
         });
@@ -84,24 +84,24 @@ public class SliderEventCallBacksTest {
     @Test
     public void testOnSlideAnimationEventListener() throws InterruptedException {
         final boolean[] flag = {false, false, false, false};
-        ((SlideToActView) mActivityRule.getActivity().findViewById(R.id.slide_1)).setOnSlideToActAnimationEventListener(new SlideToActView.OnSlideToActAnimationEventListener() {
+        ((BvhSlider) mActivityRule.getActivity().findViewById(R.id.slide_1)).setOnSlideToActAnimationEventListener(new BvhSlider.OnSlideToActAnimationEventListener() {
             @Override
-            public void onSlideCompleteAnimationEnded(@NonNull SlideToActView view) {
+            public void onSlideCompleteAnimationEnded(@NonNull BvhSlider view) {
                 flag[0] = true;
             }
 
             @Override
-            public void onSlideCompleteAnimationStarted(@NonNull SlideToActView view, float threshold) {
+            public void onSlideCompleteAnimationStarted(@NonNull BvhSlider view, float threshold) {
                 flag[1] = true;
             }
 
             @Override
-            public void onSlideResetAnimationEnded(@NonNull SlideToActView view) {
+            public void onSlideResetAnimationEnded(@NonNull BvhSlider view) {
                 flag[2] = true;
             }
 
             @Override
-            public void onSlideResetAnimationStarted(@NonNull SlideToActView view) {
+            public void onSlideResetAnimationStarted(@NonNull BvhSlider view) {
                 flag[3] = true;
             }
         });

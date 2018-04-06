@@ -18,7 +18,7 @@
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             android:id="@+id/welcome_slider"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

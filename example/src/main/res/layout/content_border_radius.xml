@@ -11,46 +11,46 @@
         android:clipToPadding="false"
         android:orientation="vertical">
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             style="@style/SlideToActView.Example"
             app:text="Border Radius Not Set" />
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             style="@style/SlideToActView.Example"
             app:border_radius="0dp"
             app:text="Border Radius 0dp" />
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             style="@style/SlideToActView.Example"
             app:border_radius="2dp"
             app:text="Border Radius 2dp" />
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             style="@style/SlideToActView.Example"
             app:border_radius="4dp"
             app:text="Border Radius 4dp" />
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             style="@style/SlideToActView.Example"
             app:border_radius="8dp"
             app:text="Border Radius 8dp" />
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             style="@style/SlideToActView.Example"
             app:border_radius="12dp"
             app:text="Border Radius 12dp" />
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             style="@style/SlideToActView.Example"
             app:border_radius="20dp"
             app:text="Border Radius 20dp" />
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             style="@style/SlideToActView.Example"
             app:border_radius="24dp"
             app:text="Border Radius 24dp" />
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             style="@style/SlideToActView.Example"
             app:border_radius="28dp"
             app:text="Border Radius 28dp" />

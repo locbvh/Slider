@@ -7,7 +7,7 @@ import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.view.WindowManager;
 
-import com.bvhloc.slider.SlideToActView;
+import com.bvhloc.slider.BvhSlider;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -54,7 +54,7 @@ public class SliderLockedTest {
     public void testLockedSlideToActView_withSwipeRight_staysLocked() throws InterruptedException {
         onView(withId(R.id.slide_locked)).perform(swipeRight());
         Thread.sleep(700);
-        assertFalse(((SlideToActView) mActivityRule.getActivity().findViewById(R.id.slide_locked)).isCompleted());
-        assertTrue(((SlideToActView) mActivityRule.getActivity().findViewById(R.id.slide_locked)).isLocked());
+        assertFalse(((BvhSlider) mActivityRule.getActivity().findViewById(R.id.slide_locked)).isCompleted());
+        assertTrue(((BvhSlider) mActivityRule.getActivity().findViewById(R.id.slide_locked)).isLocked());
     }
 }

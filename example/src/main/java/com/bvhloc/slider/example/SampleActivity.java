@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.bvhloc.slider.SlideToActView;
+import com.bvhloc.slider.BvhSlider;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -20,7 +20,7 @@ import java.util.List;
 public class SampleActivity extends AppCompatActivity {
 
     public static final String EXTRA_PRESSED_BUTTON = "extra_pressed_button";
-    private List<SlideToActView> mSlideList;
+    private List<BvhSlider> mSlideList;
     private SimpleDateFormat dateFormat;
 
     @Override
@@ -69,13 +69,13 @@ public class SampleActivity extends AppCompatActivity {
 
     }
 
-    private List<SlideToActView> getSlideList() {
-        final List<SlideToActView> slideList = new ArrayList<>();
+    private List<BvhSlider> getSlideList() {
+        final List<BvhSlider> slideList = new ArrayList<>();
         final LinearLayout container = findViewById(R.id.slide_container);
         for (int i = 0; i < container.getChildCount(); i++) {
             final View child = container.getChildAt(i);
-            if (child instanceof SlideToActView) {
-                slideList.add((SlideToActView) child);
+            if (child instanceof BvhSlider) {
+                slideList.add((BvhSlider) child);
             }
         }
         return slideList;
@@ -90,7 +90,7 @@ public class SampleActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.reset:
-                for (SlideToActView slide : mSlideList) {
+                for (BvhSlider slide : mSlideList) {
                     slide.resetSlider();
                 }
                 return true;
@@ -103,38 +103,38 @@ public class SampleActivity extends AppCompatActivity {
 
 
     private void setupEventCallbacks() {
-        final SlideToActView slide = findViewById(R.id.event_slider);
+        final BvhSlider slide = findViewById(R.id.event_slider);
         final TextView log = findViewById(R.id.event_log);
-        slide.setOnSlideCompleteListener(new SlideToActView.OnSlideCompleteListener() {
+        slide.setOnSlideCompleteListener(new BvhSlider.OnSlideCompleteListener() {
             @Override
-            public void onSlideComplete(@NonNull SlideToActView view) {
+            public void onSlideComplete(@NonNull BvhSlider view) {
                 log.append("\n" + getTime() + " onSlideComplete");
             }
         });
-        slide.setOnSlideResetListener(new SlideToActView.OnSlideResetListener() {
+        slide.setOnSlideResetListener(new BvhSlider.OnSlideResetListener() {
             @Override
-            public void onSlideReset(@NonNull SlideToActView view) {
+            public void onSlideReset(@NonNull BvhSlider view) {
                 log.append("\n" + getTime() + " onSlideReset");
             }
         });
-        slide.setOnSlideToActAnimationEventListener(new SlideToActView.OnSlideToActAnimationEventListener() {
+        slide.setOnSlideToActAnimationEventListener(new BvhSlider.OnSlideToActAnimationEventListener() {
             @Override
-            public void onSlideCompleteAnimationStarted(@NonNull SlideToActView view, float threshold) {
+            public void onSlideCompleteAnimationStarted(@NonNull BvhSlider view, float threshold) {
                 log.append("\n" + getTime() + " onSlideCompleteAnimationStarted - " + threshold + "");
             }
 
             @Override
-            public void onSlideCompleteAnimationEnded(@NonNull SlideToActView view) {
+            public void onSlideCompleteAnimationEnded(@NonNull BvhSlider view) {
                 log.append("\n" + getTime() + " onSlideCompleteAnimationEnded");
             }
 
             @Override
-            public void onSlideResetAnimationStarted(@NonNull SlideToActView view) {
+            public void onSlideResetAnimationStarted(@NonNull BvhSlider view) {
                 log.append("\n" + getTime() + " onSlideResetAnimationStarted");
             }
 
             @Override
-            public void onSlideResetAnimationEnded(@NonNull SlideToActView view) {
+            public void onSlideResetAnimationEnded(@NonNull BvhSlider view) {
                 log.append("\n" + getTime() + " onSlideResetAnimationEnded");
             }
         });

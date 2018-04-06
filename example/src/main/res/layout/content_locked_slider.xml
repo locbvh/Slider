@@ -11,7 +11,7 @@
         android:clipToPadding="false"
         android:orientation="vertical">
 
-        <com.bvhloc.slider.SlideToActView
+        <com.bvhloc.slider.BvhSlider
             android:id="@+id/slide_locked"
             style="@style/SlideToActView.Example"
             app:slider_locked="true"
